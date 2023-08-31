@@ -1,0 +1,1 @@
+cp face_recognition.service /etc/systemd/system/ && systemctl daemon-reload
