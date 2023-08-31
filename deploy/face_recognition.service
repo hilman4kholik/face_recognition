@@ -1,0 +1,13 @@
+[Unit]
+Description=Daemon for face_recognition
+Documentation=http://docs.face_recognition
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/opt/app/face_recognition.com/venv/bin/supervisord -c /opt/app/face_recognition.com/face_recognition/deploy/supervisord.conf
+ExecReload=/opt/app/face_recognition.com/venv/bin/supervisorctl -c /opt/app/face_recognition.com/face_recognition/deploy/supervisord.conf reload
+ExecStop=/opt/app/face_recognition.com/venv/bin/supervisorctl -c /opt/app/face_recognition.com/face_recognition/deploy/supervisord.conf shutdown
+
+[Install]
+WantedBy=multi-user.target

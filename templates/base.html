@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face detection</title>
+  <script defer src="{% static 'face-api.min.js' %}"></script>
+  <script defer src="{% static 'script.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'style1.css' %}">
+</head>
+<body>
+  <div>
+    {% block content %}
+    {% endblock content %}
+</div>
+</body>
+</html>
