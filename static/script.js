@@ -16,7 +16,7 @@ function startWebcam() {
       video.srcObject = stream;
     })
     .catch((error) => {
-      console.error(error);
+      // console.error(error);
     });
 }
 
@@ -67,7 +67,9 @@ video.addEventListener("play", async () => {
         label: result,
       });
       drawBox.draw(canvas);
-      console.log(result)
+      if (result._label != 'unknown'){
+        console.log(result._label)
+      }
     });
   }, 100);
 });

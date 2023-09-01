@@ -1,0 +1,1 @@
+docker build -t face_recognition . && docker run -dp 127.0.0.1:8000:8000 face_recognition
